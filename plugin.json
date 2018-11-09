@@ -1,0 +1,1101 @@
+{
+  "name": "custom.remote.python.atlas",
+  "version": "38.0",
+  "experimentalMinVersion" : "2.000",
+  "productiveMinVersion" : "3.000",
+  "type": "python",
+  "requiredAgentVersion": "1.101.0",
+  "entity": "CUSTOM_DEVICE",
+  "processTypeNames": ["PYTHON"],
+  "technologies": ["MongoDB"],
+  "source": {
+    "package": "AtlasPlugin",
+    "className": "CustomAtlasRemotePlugin",
+    "install_requires": ["requests>=2.6.0"],
+    "activation": "Remote"
+  },
+  "metrics": [
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "CONNECTIONS",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Connections"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "NETWORK_BYTES_IN",
+        "unit": "BytePerSecond",
+        "dimensions": [],
+        "displayname": "Network Bytes In"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "NETWORK_BYTES_OUT",
+        "unit": "BytePerSecond",
+        "dimensions": [],
+        "displayname": "Network Bytes Out"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "NETWORK_NUM_REQUESTS",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Network Requests"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "OPCOUNTER_CMD",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Commands"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "OPCOUNTER_QUERY",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Query Commands"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "OPCOUNTER_UPDATE",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Update Commands"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "OPCOUNTER_DELETE",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Delete Commands"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "OPCOUNTER_GETMORE",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of getMores Performed"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "OPCOUNTER_INSERT",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Number of Insert Commands"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "LOGICAL_SIZE",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Logical Size"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_CPU_USER",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU User"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_CPU_KERNEL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU Kernel"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_CPU_CHILDREN_USER",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU Children User"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_CPU_CHILDREN_KERNEL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU Children Kernel"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_NORMALIZED_CPU_USER",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU User Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_NORMALIZED_CPU_KERNEL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU Kernel Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_NORMALIZED_CPU_CHILDREN_USER",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU Children User Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "PROCESS_NORMALIZED_CPU_CHILDREN_KERNEL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "Process CPU Children Kernel Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_USER",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU User"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_KERNEL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Kernel"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_NICE",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Nice"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_IOWAIT",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU IOWait"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_IRQ",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU IRQ"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_SOFTIRQ",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Soft IRQ"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_GUEST",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Guest"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_CPU_STEAL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Steal"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_USER",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU User Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_KERNEL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Kernel Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_NICE",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Nice Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_IOWAIT",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU IOWait Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_IRQ",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU IRQ Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_SOFTIRQ",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Soft IRQ Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_GUEST",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Guest Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "SYSTEM_NORMALIZED_CPU_STEAL",
+        "unit": "Percent",
+        "dimensions": [],
+        "displayname": "System CPU Steal Normalized"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "ASSERT_REGULAR",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Regular Assert"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "ASSERT_WARNING",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Assert Warning"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "ASSERT_MSG",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Assert Message"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "ASSERT_USER",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Assert User"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "MEMORY_RESIDENT",
+        "unit": "MegaByte",
+        "dimensions": [],
+        "displayname": "Memory Resident"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "MEMORY_VIRTUAL",
+        "unit": "MegaByte",
+        "dimensions": [],
+        "displayname": "Memory Virtual"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "MEMORY_MAPPED",
+        "unit": "MegaByte",
+        "dimensions": [],
+        "displayname": "Memory Mapped"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "EXTRA_INFO_PAGE_FAULTS",
+        "unit": "PerSecond",
+        "dimensions": [],
+        "displayname": "Page Faults"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "CURSORS_TOTAL_OPEN",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Total Cursors Open"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "CURSORS_TOTAL_TIMED_OUT",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Total Cursors Timed Out"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "DOCUMENT_METRICS_RETURNED",
+        "unit": "PerSecond",
+        "dimensions": [],
+        "displayname": "Documents Returned Rate"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "DOCUMENT_METRICS_INSERTED",
+        "unit": "PerSecond",
+        "dimensions": [],
+        "displayname": "Documents Inserted Rate"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "DOCUMENT_METRICS_UPDATED",
+        "unit": "PerSecond",
+        "dimensions": [],
+        "displayname": "Documents Updated Rate"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "DOCUMENT_METRICS_DELETED",
+        "unit": "PerSecond",
+        "dimensions": [],
+        "displayname": "Documents Deleted Rate"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "GLOBAL_LOCK_CURRENT_QUEUE_TOTAL",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Global Lock Current Queue Total"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "GLOBAL_LOCK_CURRENT_QUEUE_READERS",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Global Lock Current Queue Readers"
+      }
+    },
+    {
+      "entity": "CUSTOM_DEVICE",
+      "timeseries": {
+        "key": "GLOBAL_LOCK_CURRENT_QUEUE_WRITERS",
+        "unit": "Count",
+        "dimensions": [],
+        "displayname": "Global Lock Current Queue Writers"
+      }
+    }
+  ],
+     "ui": {
+	   "keymetrics" : [
+				{
+				"key": "CONNECTIONS",
+				"displayname": "Connections"
+				},
+				{
+				"key": "NETWORK_BYTES_IN",
+				"displayname": "Network Bytes In"
+				}
+				  ],
+        "charts": [],
+        "keycharts": [
+          {
+            "group": "Connections",
+            "key": "CONNECTIONS",
+            "title": "Connections",
+            "displayname": "Connections",
+            "description": "The number of currently active connections to this server.",
+            "series" : [
+              {
+                "key": "CONNECTIONS",
+                "displayname": "Connections",
+                "seriestype": "bar",
+                "color": "#006bba",
+                "metricexplaination": "Number of Connections"
+              }
+            ]
+          },
+          {
+            "group": "Operations",
+            "title": "Commands",
+            "displayname": "Commands",
+            "description":"The average rate of commands performed.",
+            "series" : [
+              {
+                "key": "OPCOUNTER_CMD",
+                "displayname": "Commands",
+                "seriestype": "line",
+                "unit": "PerSecond",
+                "metricexplaination": "Number of Commands"
+              }
+            ]
+          },
+          {
+            "group": "Operations",
+            "title": "Operations",
+            "displayname": "Operations",
+            "description": "The average rate of each operation performed.",
+            "series" : [
+              {
+                "key": "OPCOUNTER_QUERY",
+                "displayname": "Query Operations",
+                "seriestype": "area",
+                "stacked": true,
+                "color": "#269E47",
+                "unit": "PerSecond",
+                "metricexplaination": "Number of Query Operations"
+              },
+              {
+                "key": "OPCOUNTER_DELETE",
+                "displayname": "Delete Operations",
+                "seriestype": "area",
+                "stacked": true,
+                "color": "#448A91",
+                "unit": "PerSecond",
+                "metricexplaination": "Number of Delete Operations"
+              },
+              {
+                "key": "OPCOUNTER_UPDATE",
+                "displayname": "Update Operations",
+                "seriestype": "area",
+                "stacked": true,
+                "color": "#85CA98",
+                "unit": "PerSecond",
+                "metricexplaination": "Number of Update Operations"
+              },
+              {
+                "key": "OPCOUNTER_GETMORE",
+                "displayname": "Getmore Operations",
+                "seriestype": "area",
+                "stacked": true,
+                "color": "#D381B3",
+                "unit": "PerSecond",
+                "metricexplaination": "Number of Getmore Operations"
+              },
+              {
+                "key": "OPCOUNTER_INSERT",
+                "displayname": "Insert Operations",
+                "seriestype": "area",
+                "stacked": true,
+                "color": "#92A83B",
+                "unit": "PerSecond",
+                "metricexplaination": "Number of Insert Operations"
+              }
+            ]
+          },
+          {
+            "group": "Network",
+            "title": "Network",
+            "displayname": "Network",
+            "series" : [
+              {
+                "key": "NETWORK_BYTES_IN",
+                "displayname": "Network Bytes In",
+                "seriestype": "line",
+                "stacked": false,
+                "color": "#2ab6f4",
+                "unit": "b/sec",
+                "metricexplaination": "Bytes In Per Second"
+              },
+              {
+                "key": "NETWORK_BYTES_OUT",
+                "displayname": "Network Bytes Out",
+                "seriestype": "line",
+                "stacked": false,
+                "color": "#b4e5f9",
+                "unit": "b/sec",
+                "metricexplaination": "Bytes Out Per Second"
+              },
+              {
+                "key": "NETWORK_NUM_REQUESTS",
+                "displayname": "Number Requests",
+                "seriestype": "bar",
+                "rightaxis": true,
+                "color": "#006bba",
+                "metricexplaination": "Number of Network Requests"
+              }
+            ]
+          },
+          {
+            "group": "CPU",
+            "title": "Process CPU",
+            "displayname": "Process CPU",
+            "description": "The CPU usage of MongoDB. For servers with more than 1 CPU core, these values can exceed 100%.",
+            "series" : [
+              {
+                "key": "PROCESS_CPU_USER",
+                "displayname": "Process CPU User",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU User"
+              },
+              {
+                "key": "PROCESS_CPU_KERNEL",
+                "displayname": "Process CPU Kernel",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU Kernel"
+              },
+              {
+                "key": "PROCESS_CPU_CHILDREN_USER",
+                "displayname": "Process CPU Children User",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU Children User"
+              },
+              {
+                "key": "PROCESS_CPU_CHILDREN_KERNEL",
+                "displayname": "Process CPU Children Kernel",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU Children Kernel"
+              }
+            ]
+          },
+          {
+            "group": "CPU",
+            "title": "Process CPU Normalized",
+            "displayname": "Process CPU Normalized",
+            "description": "The CPU usage of MongoDB, scaled to a range of 0-100% by dividing by the number of CPU cores.",
+            "series" : [
+              {
+                "key": "PROCESS_NORMALIZED_CPU_USER",
+                "displayname": "Process CPU User Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU User Normalized"
+              },
+              {
+                "key": "PROCESS_NORMALIZED_CPU_KERNEL",
+                "displayname": "Process CPU Kernel Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU Kernel Normalized"
+              },
+              {
+                "key": "PROCESS_NORMALIZED_CPU_CHILDREN_USER",
+                "displayname": "Process CPU Children User Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU Children User Normalized"
+              },
+              {
+                "key": "PROCESS_NORMALIZED_CPU_CHILDREN_KERNEL",
+                "displayname": "Process CPU Children Kernel Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "Process CPU Children Kernel Normalized"
+              }
+            ]
+          },
+          {
+            "group": "CPU",
+            "title": "System CPU",
+            "displayname": "System CPU",
+            "description": "CPU usage of processes on the host server. For servers with more than 1 CPU core, this value can exceed 100%.",
+            "series" : [
+              {
+                "key": "SYSTEM_CPU_USER",
+                "displayname": "System CPU User",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU User"
+              },
+              {
+                "key": "SYSTEM_CPU_KERNEL",
+                "displayname": "System CPU Kernel",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Kernel"
+              },
+              {
+                "key": "SYSTEM_CPU_NICE",
+                "displayname": "System CPU Nice",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Nice"
+              },
+              {
+                "key": "SYSTEM_CPU_IOWAIT",
+                "displayname": "System CPU IOWAIT",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU IOWAIT"
+              },
+              {
+                "key": "SYSTEM_CPU_IRQ",
+                "displayname": "System CPU IRQ",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU IRQ"
+              },
+              {
+                "key": "SYSTEM_CPU_SOFTIRQ",
+                "displayname": "System CPU Soft IRQ",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Soft IRQ"
+              },
+              {
+                "key": "SYSTEM_CPU_GUEST",
+                "displayname": "System CPU Guest",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Guest"
+              },
+              {
+                "key": "SYSTEM_CPU_STEAL",
+                "displayname": "System CPU Steal",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Steal"
+              }
+            ]
+          },
+          {
+            "group": "CPU",
+            "title": "System CPU Normalized",
+            "displayname": "System CPU Normalized",
+            "description": "CPU usage of processes on the host server, scaled to a range of 0-100% by dividing by the number of CPU cores.",
+            "series" : [
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_USER",
+                "displayname": "System CPU User Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU User Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_KERNEL",
+                "displayname": "System CPU Kernel Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Kernel Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_NICE",
+                "displayname": "System CPU Nice Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Nice Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_IOWAIT",
+                "displayname": "System CPU IOWAIT Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU IOWAIT Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_IRQ",
+                "displayname": "System CPU IRQ Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU IRQ Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_SOFTIRQ",
+                "displayname": "System CPU Soft IRQ Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Soft IRQ Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_GUEST",
+                "displayname": "System CPU Guest Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Guest Normalized"
+              },
+              {
+                "key": "SYSTEM_NORMALIZED_CPU_STEAL",
+                "displayname": "System CPU Steal Normalized",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Percent",
+                "metricexplaination": "System CPU Steal Normalized"
+              }
+            ]
+          },
+          {
+            "group": "Asserts",
+            "title": "Regular Asserts",
+            "displayname": "Regular Asserts",
+            "description": "The number of Regular assertions raised since the MongoDB process started.",
+            "series" :[
+              {
+                "key": "ASSERT_REGULAR",
+                "displayname": "Regular Asserts",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Count",
+                "metricexplaination": "Regular Asserts"
+              }
+            ]
+          },
+          {
+            "group": "Asserts",
+            "title": "Warning Asserts",
+            "displayname": "Warning Asserts",
+            "description": "The number of Warning assertions raised since the MongoDB process started.",
+            "series" :[
+              {
+                "key": "ASSERT_WARNING",
+                "displayname": "Warning Asserts",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Count",
+                "metricexplaination": "Warning Asserts"
+              }
+            ]
+          },
+          {
+            "group": "Asserts",
+            "title": "Message Asserts",
+            "displayname": "Message Asserts",
+            "description": "The number of Message assertions raised since the MongoDB process started.",
+            "series" :[
+              {
+                "key": "ASSERT_MSG",
+                "displayname": "Message Asserts",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Count",
+                "metricexplaination": "Message Asserts"
+              }
+            ]
+          },
+          {
+            "group": "Asserts",
+            "title": "User Asserts",
+            "displayname": "User Asserts",
+            "description": "The number of User assertions raised since the MongoDB process started.",
+            "series" :[
+              {
+                "key": "ASSERT_USER",
+                "displayname": "User Asserts",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "Count",
+                "metricexplaination": "User Asserts"
+              }
+            ]
+          },
+          {
+            "group": "Memory",
+            "title": "Memory",
+            "displayname": "Memory",
+            "description": "Measures memory for a MongoDB process.",
+            "series" :[
+              {
+                "key": "MEMORY_RESIDENT",
+                "displayname": "Memory Resident",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "MegaByte",
+                "metricexplaination": "Memory Resident"
+              },
+              {
+                "key": "MEMORY_VIRTUAL",
+                "displayname": "Memory Virtual",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "MegaByte",
+                "metricexplaination": "Memory Virtual"
+              },
+              {
+                "key": "MEMORY_MAPPED",
+                "displayname": "Memory Mapped",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "MegaByte",
+                "metricexplaination": "Memory Mapped"
+              }
+            ]
+          },
+          {
+            "group": "Memory",
+            "title": "Page Faults",
+            "displayname": "Page Faults",
+            "description": "Measurements on page faults related to the host.",
+            "series" :[
+              {
+                "key": "EXTRA_INFO_PAGE_FAULTS",
+                "displayname": "Page Faults",
+                "seriestype": "bar",
+                "stacked": false,
+                "unit": "PerSecond",
+                "metricexplaination": "Page Faults"
+              }
+            ]
+          },
+          {
+            "group": "Cursors",
+            "title": "Cursors",
+            "displayname": "Cursors",
+            "description": "Measures the number of cursors for a MongoDB process.",
+            "series" :[
+              {
+                "key": "CURSORS_TOTAL_OPEN",
+                "displayname": "Cursors Total Open",
+                "seriestype": "bar",
+                "stacked": false,
+                "unit": "Count",
+                "metricexplaination": "Cursors Total Open"
+              },
+              {
+                "key": "CURSORS_TOTAL_TIMED_OUT",
+                "displayname": "Cursors Total Timed Out",
+                "seriestype": "bar",
+                "stacked": false,
+                "color": "#dc172a",
+                "unit": "Count",
+                "metricexplaination": "Cursors Total Timed Out"
+              }
+            ]
+          },
+          {
+            "group": "Documents",
+            "title": "Documents Returned",
+            "displayname": "Documents",
+            "description": "The average rate per second of documents Returned.",
+            "series" :[
+              {
+                "key": "DOCUMENT_METRICS_RETURNED",
+                "displayname": "Documents Returned",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "PerSecond",
+                "metricexplaination": "Documents Returned"
+              }
+            ]
+          },
+          {
+            "group": "Documents",
+            "title": "Documents Inserted",
+            "displayname": "Documents",
+            "description": "The average rate per second of documents Inserted.",
+            "series" :[
+              {
+                "key": "DOCUMENT_METRICS_INSERTED",
+                "displayname": "Documents Inserted",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "PerSecond",
+                "metricexplaination": "Documents Inserted"
+              }
+            ]
+          },
+          {
+            "group": "Documents",
+            "title": "Documents Updated",
+            "displayname": "Documents",
+            "description": "The average rate per second of documents Updated.",
+            "series" :[
+              {
+                "key": "DOCUMENT_METRICS_UPDATED",
+                "displayname": "Documents Updated",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "PerSecond",
+                "metricexplaination": "Documents Updated"
+              }
+            ]
+          },
+          {
+            "group": "Documents",
+            "title": "Documents Deleted",
+            "displayname": "Documents",
+            "description": "The average rate per second of documents Deleted.",
+            "series" :[
+              {
+                "key": "DOCUMENT_METRICS_DELETED",
+                "displayname": "Documents Deleted",
+                "seriestype": "line",
+                "stacked": false,
+                "unit": "PerSecond",
+                "metricexplaination": "Documents Deleted"
+              }
+            ]
+          },
+          {
+            "group": "Lock",
+            "title": "Lock",
+            "displayname": "Global Lock",
+            "description": "Measures operations waiting on locks.",
+            "series" :[
+              {
+                "key": "GLOBAL_LOCK_CURRENT_QUEUE_TOTAL",
+                "displayname": "Lock Queue Total",
+                "seriestype": "line",
+                "stacked": false,
+                "color": "#002c66",
+                "unit": "Count",
+                "metricexplaination": "Global Current Lock Queue Total"
+              },
+              {
+                "key": "GLOBAL_LOCK_CURRENT_QUEUE_READERS",
+                "displayname": "Lock Queue Readers",
+                "seriestype": "bar",
+                "stacked": false,
+                "color": "#006BBA",
+                "unit": "Count",
+                "metricexplaination": "Global Current Lock Queue Readers"
+              },
+              {
+                "key": "GLOBAL_LOCK_CURRENT_QUEUE_WRITERS",
+                "displayname": "Lock Queue Writers",
+                "seriestype": "bar",
+                "stacked": false,
+                "color": "#B4E5F9",
+                "unit": "Count",
+                "metricexplaination": "Global Current Lock Queue Writers"
+              }
+            ]
+          }
+        ]
+    },
+      "properties": [
+        {
+          "key": "groupid",
+          "type": "String"
+        },
+        {
+          "key": "userid",
+          "type": "String"
+        },
+        {
+          "key": "token",
+          "type": "String"
+        }
+      ],
+      "configUI": {
+        "displayName": "MongoDB Atlas",
+        "properties": [
+          {"key" : "groupid", "displayName": "GroupID", "displayOrder": 1, "displayHint": "GroupID"},
+          {"key" : "userid", "displayName": "Username", "displayOrder": 2, "displayHint": "Username"},
+          {"key" : "token", "displayName": "Token", "displayOrder": 3, "displayHint": "Token"}
+        ]
+      }
+}
