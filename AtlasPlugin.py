@@ -172,8 +172,12 @@ class CustomAtlasRemotePlugin(RemoteBasePlugin):
             group_temp.report_property("Provider Name", str(cluster["providerSettings"]["providerName"]))
 
     def add_node_properties(self, element_temp, node_info):
-        node_ip = socket.gethostbyname(str(node_info["hostname"]))
-        element_temp.add_endpoint(str(node_ip), str(node_info["port"]), dnsNames=[str(node_info["hostname"])])
+
+        try:
+            node_ip = socket.gethostbyname(str(node_info["hostname"]))
+            element_temp.add_endpoint(str(node_ip), str(node_info["port"]), dnsNames=[str(node_info["hostname"])])
+        except Exception as ex:
+            logger.error("[atlasremoteplugin.add_node_properties] EXCEPTION: " + str(ex))
 
         element_temp.report_property("Hostname", str(node_info["hostname"]))
         element_temp.report_property("Port", str(node_info["port"]))
