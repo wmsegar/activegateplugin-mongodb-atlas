@@ -175,10 +175,9 @@ class CustomAtlasRemotePlugin(RemoteBasePlugin):
 
         try:
             node_ip = socket.gethostbyname(str(node_info["hostname"]))
-            element_temp.add_endpoint(str(node_ip), str(node_info["port"]), dnsNames=[str(node_info["hostname"])])
+            element_temp.add_endpoint(str(node_ip), node_info["port"], dnsNames=[str(node_info["hostname"])])
         except Exception as ex:
             logger.error("[atlasremoteplugin.add_node_properties] EXCEPTION: " + str(ex))
-            logger.error("PORT NUMBER: " + str(node_info["port"]))
 
         element_temp.report_property("Hostname", str(node_info["hostname"]))
         element_temp.report_property("Port", str(node_info["port"]))
