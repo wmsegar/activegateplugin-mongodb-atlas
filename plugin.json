@@ -1,6 +1,6 @@
 {
   "name": "custom.remote.python.atlas",
-  "version": "40.0",
+  "version": "40.1",
   "experimentalMinVersion" : "2.000",
   "productiveMinVersion" : "3.000",
   "type": "python",
