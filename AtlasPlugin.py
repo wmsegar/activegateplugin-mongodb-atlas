@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 ATLAS_API = "https://cloud.mongodb.com/api/atlas/v1.0/groups/"
 #ATLAS_API = "http://demo1693188.mockable.io/"
 
-
 class CustomAtlasRemotePlugin(RemoteBasePlugin):
     timestamp = ""
 
@@ -129,6 +128,8 @@ class CustomAtlasRemotePlugin(RemoteBasePlugin):
     def parse_metrics(self, dataPoints):
 
         if len(dataPoints) == 0:
+            return 0
+        elif len(dataPoints) <= 1 and dataPoints[-1]["value"] is None:
             return 0
         elif dataPoints[-1]["value"] is None and dataPoints[-2] is None:
             return 0
