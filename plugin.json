@@ -1,8 +1,8 @@
 {
   "name": "custom.remote.python.atlas",
-  "version": "40.1",
-  "experimentalMinVersion" : "2.000",
-  "productiveMinVersion" : "3.000",
+  "version": "1.0",
+  "experimentalMinVersion" : "1.000",
+  "productiveMinVersion" : "1.000",
   "type": "python",
   "requiredAgentVersion": "1.101.0",
   "entity": "CUSTOM_DEVICE",

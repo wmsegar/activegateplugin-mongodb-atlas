@@ -10,7 +10,7 @@ from requests.auth import HTTPDigestAuth
 logger = logging.getLogger(__name__)
 
 ATLAS_API = "https://cloud.mongodb.com/api/atlas/v1.0/groups/"
-#ATLAS_API = "http://demo1693188.mockable.io/"
+
 
 class CustomAtlasRemotePlugin(RemoteBasePlugin):
     timestamp = ""
