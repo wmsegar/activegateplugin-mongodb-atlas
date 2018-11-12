@@ -110,4 +110,4 @@ See [CONTRIBUTING](./CONTRIBUTING.md) for details on submitting changes.
 
 ## License
 
-Dynatrace MongoDB Atlas ActiveGate Plugin is under Apache 2.0 license. See LICENSE for details.
+Dynatrace MongoDB Atlas ActiveGate Plugin is under Apache 2.0 license. See [LICENSE](./LICENSE.md) for details.
