@@ -161,11 +161,14 @@ class CustomAtlasRemotePlugin(RemoteBasePlugin):
         self.timestamp = str(datetime.datetime.utcnow())
 
     def add_cluster_properties(self, group_temp, cluster):
-        group_temp.report_property("Replication Factor", str(cluster["replicationFactor"]))
-        group_temp.report_property("MongoDB Version", str(cluster["mongoDBVersion"]))
-        group_temp.report_property("Cluster Type", str(cluster["clusterType"]))
-        group_temp.report_property("Instance Size Name", str(cluster["providerSettings"]["instanceSizeName"]))
-        group_temp.report_property("Region Name", str(cluster["providerSettings"]["regionName"]))
+        try:
+            group_temp.report_property("Replication Factor", str(cluster["replicationFactor"]))
+            group_temp.report_property("MongoDB Version", str(cluster["mongoDBVersion"]))
+            group_temp.report_property("Cluster Type", str(cluster["clusterType"]))
+            group_temp.report_property("Instance Size Name", str(cluster["providerSettings"]["instanceSizeName"]))
+            group_temp.report_property("Region Name", str(cluster["providerSettings"]["regionName"]))
+        except KeyError as ex:
+            logger.warn("[atlasremoteplugin.add_cluster_properties] Key " + str(ex) + " not found")
 
         try:
             group_temp.report_property("Provider Name", str(cluster["providerSettings"]["backingProviderName"]))
