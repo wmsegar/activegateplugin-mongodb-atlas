@@ -131,7 +131,7 @@ class CustomAtlasRemotePlugin(RemoteBasePlugin):
             return 0
         elif len(dataPoints) <= 1 and dataPoints[-1]["value"] is None:
             return 0
-        elif dataPoints[-1]["value"] is None and dataPoints[-2] is None:
+        elif dataPoints[-1]["value"] is None and dataPoints[-2]["value"] is None:
             return 0
         elif dataPoints[-1]["value"] is not None:
             return dataPoints[-1]["value"]
